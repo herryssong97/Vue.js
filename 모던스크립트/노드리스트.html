@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>queryselector사용</h2>
+    <p>첫번째 p태그</p>
+    <p>두번째 p태그</p>
+    <p>세번째 p태그</p>
+
+    <button onclick="myFunction()">색변경</button>
+</body>
+</html>
+
+<script>
+function myFunction() {
+  var myNodelist = document.querySelectorAll("p");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    myNodelist[i].style.color = "magenta";
+  }
+}
+</script>

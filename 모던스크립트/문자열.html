@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let str1 = "Hello";
+    let str2 = 'Single quotes are ok too';
+    let str3 = `backtick도 가능합니다. ${str1}`;
+ 
+    console.log(str1);
+    console.log(str2);
+    console.log(str3);
+
+    let name="홍길동";
+    let age=34;
+    let phone = "서울시 관악구 대학동";
+
+    result1 = "이름:" + name + "  나이:" + age + "  전화:" +phone;
+    result2 = `이름:${name}  나이:${age}  전화:${phone}`;
+
+    console.log(result1);
+    console.log(result2);
+
+    //nodejs에서 쿼리 문장 작성할때 유용하다 
+    result3 = `
+동해물과 
+백두산이
+마르고 
+닳도록`;
+    console.log(result3);
+    
+    </script>
+    
+</body>
+</html>
+

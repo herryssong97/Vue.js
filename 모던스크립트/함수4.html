@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 매개변수 'count'가 넘어오지 않으면 'unknown'을 출력해주는 함수
+    function showCount(count) {
+        alert(count ?? "unknown"); 
+    }
+
+    showCount(5); // 0
+    showCount(""); 
+    showCount(null); // unknown
+    showCount(); // unknown
+
+    </script>
+
+</body>
+</html>
+

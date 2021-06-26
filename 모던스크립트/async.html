@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //자바스크립트는 멀티스레드를 지원하지 않는다. 
+    //멀티스레드가 필요한 작업은 프라미스로 한다. 
+    //무조건 promise객체가 반환된다. 
+    async function f() {
+        return 1;
+    }
+
+    f().then(alert); // 1
+
+</script>
+</body>
+</html>

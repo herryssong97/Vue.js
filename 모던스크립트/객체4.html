@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let person={
+         "name":"홍길동", age:23, phone:"010-0000-0000",
+        "display":function(){
+            console.log(this.name, this.age, this.phone);
+        },
+        "setValue":function(name="", age=20,phone="010-0000-0000"){
+            this.name=name;
+            this.age = age;
+            this.phone=phone;
+        }
+    };
+
+    person.display();
+    person.setValue("임꺽정", 33, "011-0000-1111");
+    person.display();
+    
+    </script>
+
+</body>
+</html>
+

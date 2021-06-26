@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let json = '{ "age": 30 }'; // 불완전한 데이터-JSON을 만들때 키값을 '' 로 감싸면 안된다 .
+    //반드시 ""로 감싸야 한다 
+
+    try {
+
+        let user = JSON.parse(json); // <-- 에러 없음
+
+        if (!user.name) {
+            throw new SyntaxError("불완전한 데이터: 이름 없음"); // (*)
+        }
+        console.log( user.name );
+
+    } catch(e) {
+        console.log( "JSON Error: " + e.message ); // JSON Error: 불완전한 데이터: 이름 없음
+    }
+</script>
+
+</body>
+</html>
+

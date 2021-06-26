@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 배열 요소의 합 계산하기
+    var arr = [9, 2, 8, 5, 7];
+    var sum = arr.reduce( (pre, value)=>{
+        console.log("pre", pre);
+        console.log("value", value);
+        
+        //return pre + value;
+        
+        pre = value; 
+        return pre;
+    });
+    console.log(sum); // 31
+
+    //두번째 인자를 0으로 부여하였음 
+    sum = arr.reduce( (pre, value)=>{
+        return pre + value;
+    }, 0 );
+    console.log(sum); 
+
+    
+    </script>
+
+</body>
+</html>
+

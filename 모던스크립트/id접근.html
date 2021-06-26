@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title1">제목줄1</h1>
+    <h1 id="title1">제목줄1111</h1>
+    
+    <h1 id="title2">제목줄2</h1>
+    <h1 id="title3">제목줄3</h1>
+    
+</body>
+</html>
+<script>
+    document.getElementById('title1').innerHTML="첫번째 제목";
+    document.getElementById('title2').innerHTML="두번째 제목";
+    document.getElementById('title3').innerHTML="세번째 제목";
+
+    let ids=["title1", "title2", "title3"];
+    for(i=0; i<ids.length; i++)
+        document.getElementById(ids[i]).style.color="#ff0000";
+
+    let colors=["#ff0000", "#00ff00", "#0000ff"];
+    for(i=1; i<=3; i++)
+        document.getElementById("title"+i).style.color=colors[i-1];
+
+    
+</script>
+

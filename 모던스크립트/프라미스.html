@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let promise = new Promise(function(resolve, reject) {
+        // 프라미스가 만들어지면 executor 함수는 자동으로 실행됩니다.
+        // 1초 뒤에 일이 성공적으로 끝났다는 신호가 전달되면서 result가 'done'이 됩니다.
+        let data ={"name":"홍길동", "age":34};
+        //데이터베이스나 아니면 서버로부터 정보르르 
+        setTimeout(() => resolve(data), 1000);
+        //setTimeout(() => reject("fail"), 1000);
+    })
+    .then( (value)=>{ 
+            console.log("success", value.name, value.age);
+        } 
+    ).catch( 
+        (error)=>{
+            console.log(error);
+        }
+    ).finally(
+        ()=>{ console.log("ending....");  }
+    )
+   
+</script>
+
+</body>
+</html>
+

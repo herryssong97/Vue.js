@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //객체 배열만들기 - 객체 배열은 대괄호를 사용한다 
+    let students = [
+        {"name":"홍길동", kor:90, eng:90, mat:80},
+        {"name":"장길산", kor:80, eng:80, mat:100},
+        {"name":"임꺽정", kor:70, eng:70, mat:90},
+        {"name":"장승업", kor:60, eng:80, mat:60},
+        {"name":"홍경래", kor:70, eng:50, mat:40},
+    ];
+
+    console.log("객체의 개수 : ", students.length);
+    console.log( students[0].name, students[0].kor,  students[0].eng,  students[0].mat );
+    console.log( students[1].name, students[2].kor,  students[3].eng,  students[3].mat );
+    console.log( students[2]["name"], students[2]["kor"],  students[2]["eng"],  students[2]["mat"] );
+    
+
+    for(i=0; i<students.length; i++){
+        console.log( students[i].name, students[i].kor,  students[i].eng,  students[i].mat );
+    }
+
+    for(index in students){
+        console.log( students[index].name, students[index].kor,  students[index].eng,  students[index].mat );
+    }
+    
+    for(student of students){
+        console.log( student.name, student.kor,  student.eng,  student.mat );
+    }
+    
+    for (const [key, value] of Object.entries(students)) {
+        console.log(`${key}: ${value.name} ${value.kor} ${value.eng} ${value.mat}`);
+    }   
+
+
+    </script>
+
+</body>
+</html>
+

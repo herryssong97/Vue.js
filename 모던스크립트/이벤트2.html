@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   x : <input type="text" name="xvalue" id="xvalue"><br/>
+   y : <input type="text" name="yvalue" id="yvalue"><br/>
+
+   <button onclick="add('1')">더하기</button>&nbsp;&nbsp;
+   <button onclick="add('2')">빼기</button>&nbsp;&nbsp;
+   <button onclick="add('3')">곱하기</button>&nbsp;&nbsp;
+   <button onclick="add('4')">나누기</button><br/>
+   
+   <span id="result"></span> 
+</body>
+</html>
+
+<script>
+    function add(sel){
+        x = document.getElementById("xvalue").value;
+        y = document.getElementById("yvalue").value;
+
+        if(sel=='1')
+            result = parseInt(x) + parseInt(y);
+        else if(sel=='2')
+            result = parseInt(x) - parseInt(y);
+        else if(sel=='3')
+            result = parseInt(x) * parseInt(y);
+        else
+            result = parseInt(x) / parseInt(y);
+
+        document.getElementById("result").innerHTML = result;
+    }
+
+    //빼기, 곱하기, 나누기- 함수 하나만 만들어서 처리하기  
+</script>

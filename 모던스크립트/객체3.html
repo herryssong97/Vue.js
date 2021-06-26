@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //객체 배열만들기 - 객체 배열은 대괄호를 사용한다 
+    let myproduct={
+        "product_name":"노트북",
+        "product_info":[
+            {"company":"회사1", "model":"modelAAA", "price":2000000},
+            {"company":"회사2", "model":"modelBBB", "price":1400000},
+            {"company":"회사3", "model":"modelCCC", "price":170000}, 
+        ]
+    }
+
+    console.log(myproduct.product_name);
+    for(item of myproduct.product_info){
+        console.log(item.company, item.model, item.price)
+    }
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     class User {
+
+        //생서자 
+        constructor(name) {//생성자는 constructor이다
+            this.name = name;
+        }
+
+        sayHi() {
+            alert(this.name);
+        }
+
+    }
+
+    // 사용법:
+    let user = new User("John");
+    user.sayHi();
+
+    let user2 = new User();
+    user2.sayHi();
+    </script>
+
+</body>
+</html>
+

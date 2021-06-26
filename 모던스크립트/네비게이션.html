@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="h2">이 내용을 복사합니다</h2>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <button id="myBtn">복사</button>
+</body>
+</html>
+
+<script>
+    var x = document.getElementById("myBtn");
+
+    x.addEventListener("click", firstFunction);
+    
+    function firstFunction() {
+        document.getElementById("p1").innerHTML = document.getElementById("h2").childNodes[0].nodeValue;
+    }
+    
+  </script>
+

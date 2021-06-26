@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let array=[3, 5, 8, 6, 7, 11, 15, 14, 22];
+    for(i=0; i<array.length; i++){
+        if( array[i]%2==0)
+            console.log(array[i]);
+    }
+    //forEach구문- 데이터를 하나씩 차례대로 가져온다
+    //배열 하나의 요소를 전달받은 콜백함수를 매개변수로 주면 함수가 매 요소마다 호출된다
+    array.forEach(function (n) {
+        if (n % 2 == 0) {
+            console.log(n);
+        }
+    });
+
+    //화살표 함수를 이용해 구현함  
+    array.forEach((n)=>{
+        if (n % 2 == 0) {
+            console.log(n);
+        }
+    });
+
+    //filter - 매개변수로 함수를 전달한다. 배열의 요소마다 한번씩 함수를 호출한다 
+    //조건에 해당하는 데이터만 반환 
+    result = array.filter( (x)=>{if(x%2==0) return x;} )
+    console.log(result);
+
+    let words=["school", "cloud", "rain", "flower", "rainbow", "survey", "hospital", "company", "snow"];
+    //filter 이 함수가 배열의 각 요소마다 자동으로 호출된다.  함수 - 각 요소마다 호출될 함수 
+    //필터를 사용해서 단어들을 대문자로 바꿔서 새로운 배열을 만들어 받기 
+    //toUpperCase
+    //문자열 길이가 5글자 넘는거 
+    results = words.map( (x)=>{ console.log(x); return x.toUpperCase(); } );
+    console.log( results );
+    
+    //파이썬 - 자바스크립트 버그로 보인다. return 값을 받아야 하는데 안받아준다 
+    results = words.filter( (x)=>{if (x.length>5)  return "a"; } ); 
+    console.log( results );
+
+    // forEach - 값을 읽어오기만
+    // filter - 조건에 맞는 데이터 집합을 반환한다
+    // map - 원래 데이터 셋을 바꿔치기 할 수 있다
+
+
+
+    </script>
+
+</body>
+</html>
+

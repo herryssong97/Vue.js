@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    for(i=1; i<=10; i++){
+        console.log("i= ", i);
+    }
+
+    let flowers=["작약", "목련", "백일홍", "국화", "장미"];
+    for(i=0; i<flowers.length; i++){
+        console.log(flowers[i]);
+    }
+    // 인덱스
+    for(index in flowers){
+        console.log( index, flowers[index] );
+    }
+    // 배열의ㅐ 요소를 하나씩
+    o=0;
+    for(item of flowers){
+        console.log(i, item);
+        i++;
+    }
+
+    // 콜백함수
+    flowers.forEach( function(e, i) {
+     console.log(e);
+    });
+    </script>
+
+</body>
+</html>
+

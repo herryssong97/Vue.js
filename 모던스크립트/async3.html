@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let promise = new Promise(function(resolve, reject) {
+        setTimeout(() =>{ 
+            console.log("loading.........................");
+            let user={"username":"홍길동", "age":12, "phone":"010-0000-0000"};  
+            resolve(user);
+        }, 1000);
+        
+    })
+    .then( (data)=>{ 
+            console.log("success");
+            console.log(data);
+            console.log(data.username, data.age, data.phone);
+        } 
+    ).catch( 
+        (error)=>{
+            console.log(error);
+        }
+    ).finally(
+        ()=>{ console.log("ending....");  }
+    )
+    </script>
+</body>
+</html>

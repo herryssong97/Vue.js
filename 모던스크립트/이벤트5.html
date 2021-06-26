@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type='text' onkeypress='inNumber()'>
+    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+
+</body>
+</html>
+
+<script>
+//문제 많음, 한글은 못막고 그밖에 엔터키나 백스페이스키도 동작하도록 바꿔야 함 
+//값을 복사하여 붙여넣기 못막음, 정규식을 사용하자 
+function inNumber(){
+    if(event.keyCode<48 || event.keyCode>57){
+        event.returnValue=false;
+    }
+}
+
+</script>
+
