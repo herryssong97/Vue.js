@@ -1,0 +1,21 @@
+<html>
+    <meta charset="utf-8">
+<body>
+    <h1>서버로부터 값 받기</h1> 
+    이름은 <%=name%> 입니다 <br/>
+    주소는 <%=address%> 입니다 
+    <br/><br/>
+    <ul>
+        <%for(i=0; i<fruits.length; i++){%>
+            <li><%=fruits[i]%></li>
+        <%}%>
+    </ul>
+
+    <br/><br/>
+    <ul>
+        <%for(i=0; i<product.length; i++){%>
+            <li><%=product[i]["product_name"]%> &nbsp; &nbsp; <%=product[i]["product_price"]%></li>
+        <%}%>
+    </ul>
+</body>
+</html>
